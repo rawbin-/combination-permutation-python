@@ -12,17 +12,15 @@
 from itertools import combinations,permutations
 
 class CombPerm:
-    def combinations(self,*args):
+    @staticmethod
+    def combinations(*args):
         return list(combinations(*args))
-
-    def permutations(self,*args):
+    @staticmethod
+    def permutations(*args):
         return list(permutations(*args))
 
-
-
 if __name__ == '__main__':
-    obj = CombPerm()
-    print(obj.combinations([1,2,3,4,5,6],3))
-    print(obj.permutations([1,2,3,4,5,6],3))
+    print(CombPerm.combinations([1,2,3,4,5,6],3))
+    print(CombPerm.permutations([1,2,3,4,5,6],3))
 
 
